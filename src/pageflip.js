@@ -45,6 +45,12 @@ export default class HTMLFlipBook extends React.Component {
       });
     });
 
-    return <div ref={(el) => (this.el = el)}>{childWithRef}</div>;
+    return React.createElement(
+      "div",
+      {
+        ref: (el) => (this.el = el),
+      },
+      childWithRef
+    );
   }
 }
