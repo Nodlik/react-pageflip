@@ -1,6 +1,6 @@
 {
   "name": "react-pageflip",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "src/pageflip.js",
   "license": "MIT",
   "description": "Simple implementation of StPageFlip libary on React.js, for creating realistic and beautiful page turning effect",
