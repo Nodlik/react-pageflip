@@ -25,7 +25,7 @@ import HTMLFlipBook from "react-pageflip";
 
 function MyBook(proops) {
   return (
-    <HTMLFlipBook width="300" height="500">
+    <HTMLFlipBook width={300} height={500}>
       <div className="demoPage">Page 1</div>
       <div className="demoPage">Page 2</div>
       <div className="demoPage">Page 3</div>
@@ -51,7 +51,7 @@ const Page = React.forwardRef((props, ref) => {
 
 function MyBook(proops) {
   return (
-    <HTMLFlipBook width="300" height="500">
+    <HTMLFlipBook width={300} height={500}>
       <Page number="1">Page text</Page>
       <Page number="2">Page text</Page>
       <Page number="3">Page text</Page>

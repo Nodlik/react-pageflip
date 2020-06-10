@@ -1,12 +1,15 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import { PageFlip } from "page-flip";
 
 export default class HTMLFlipBook extends React.Component {
   componentDidMount() {
     this.pageFlip = new PageFlip(this.el, this.props);
-    this.pageFlip.loadFromHTML(this.childRef);
 
+    this.pageFlip.loadFromHTML(this.childRef);
+    this.setHandlers();
+  }
+
+  setHandlers() {
     if (this.props.onFlip)
       this.pageFlip.on("flip", (e) => this.props.onFlip(e));
 
@@ -26,7 +29,12 @@ export default class HTMLFlipBook extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.children !== this.props.children) {
+      this.pageFlip.off("flip");
+      this.pageFlip.off("changeOrientation");
+      this.pageFlip.off("changeState");
+
       this.pageFlip.updateFromHtml(this.childRef);
+      this.setHandlers();
     }
   }
 
@@ -49,6 +57,8 @@ export default class HTMLFlipBook extends React.Component {
       "div",
       {
         ref: (el) => (this.el = el),
+        className: this.props.className,
+        style: this.props.style,
       },
       childWithRef
     );
