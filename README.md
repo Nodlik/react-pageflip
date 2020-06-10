@@ -11,7 +11,7 @@ Simple React.js wrapper for StPageFlip library, for creating realistic and beaut
 * Supports soft and hard page types (only in HTML mode) 
 * No dependencies
 
-Docs and example to StPageFlip: https://nodlik.github.io/StPageFlip/
+Live Demo with source code: https://nodlik.github.io/react-pageflip/
 
 ### Installation
 You can install the latest version using npm:
@@ -41,7 +41,7 @@ You can define pages as a component, but in this case you should use ```React.fo
 ```jsx
 const Page = React.forwardRef((props, ref) => {
   return (
-    <div className="demoPage" ref={ref}> /* ref specification required */
+    <div className="demoPage" ref={ref}> /* ref required */
       <h1>Page Header</h1>
       <p>{props.children}</p>
       <p>Page number: {props.number}</p>
@@ -98,7 +98,7 @@ class DemoBook extends React.Component {
     }
 }
 ```
-Available events:
+**Available events:**
 * ```onFlip: number``` - triggered by page turning
 * ```onChangeOrientation: ("portrait", "landscape")``` - triggered when page orientation changes
 * ```onChangeState: ("user_fold", "fold_corner", "flipping", "read")``` - triggered when the state of the book changes
@@ -125,21 +125,26 @@ For example - flipping to the next page:
 ```js
 this.pageFlip.getPageFlip().flipNext();
 ```
-Available methods:
-* `getPageCount(): number` - Get number of all pages
-* `getCurrentPageIndex(): number` - Get the current page number (starts at 0)
-* `turnToPage(pageNum: number)` - Turn to the specified page number (without animation)
-* `turnToNextPage()` - Turn to the next page (without animation)
-* `turnToPrevPage()` - Turn to the previous page (without animation)
-* `flipNext(corner: 'top' | 'bottom')` - Turn to the next page (with animation)
-* `flipPrev(corner: 'top' | 'bottom')` - Turn to the previous page (with animation)
-* `flip(pageNum: number, corner: 'top' | 'bottom')` - Turn to the specified page (with animation)
-* `loadFromImages(images: ['path-to-image1.jpg', ...])` - Load page from images
-* `loadFromHtml(items: NodeListOf | HTMLElement[])` -	Load page from html elements
-* `updateFromHtml(items: NodeListOf | HTMLElement[])` -	Update page from html elements
-* `updateFromImages(images: ['path-to-image1.jpg', ...])` - Update page from images
-* `destroy()` - Destructor. Remove an HTML Element and all event handlers
+**Available methods:**
 
+| Method name | Parameters | Return type | Description|
+| ----------- | ---------- | ----------- | ---------- |
+| `getPageCount` | ` ` | `number` | Get number of all pages |
+| `getCurrentPageIndex` | ` ` | `number` | Get the current page number (starts at 0) |
+| `turnToPage` | `pageNum: number` | `void` | Turn to the specified page number (without animation)
+| `turnToNextPage` | ` ` | `void` | Turn to the next page (without animation)
+| `turnToPrevPage` | ` ` | `void` | Turn to the previous page (without animation)
+| `flipNext` | `corner: 'top' | 'bottom'` | `void` | Turn to the next page (with animation)
+| `flipPrev` | `corner: 'top' | 'bottom'` | `void`  | Turn to the previous page (with animation)
+| `flip` | `pageNum: number, corner: 'top' | 'bottom'` | `void` | Turn to the specified page (with animation)
+| `loadFromImages` | `images: ['path-to-image1.jpg', ...]` | `void` | Load page from images
+| `loadFromHtml` | `items: NodeListOf | HTMLElement[]` | `void` | Load page from html elements
+| `updateFromHtml` | `items: NodeListOf | HTMLElement[]` | `void` | Update page from html elements
+| `updateFromImages` | `images: ['path-to-image1.jpg', ...]` | `void` | Update page from images
+| `destroy` | ` ` | `void` | Destructor. Remove an HTML Element and all event handlers
+
+
+Docs and examples to StPageFlip: https://nodlik.github.io/StPageFlip/
 ### Contacts
 Oleg,
 
