@@ -12,6 +12,7 @@ Simple React.js wrapper for StPageFlip library, for creating realistic and beaut
 * No dependencies
 
 Live Demo with source code: https://nodlik.github.io/react-pageflip/
+
 Docs and examples to StPageFlip: https://nodlik.github.io/StPageFlip/
 
 ### Installation
