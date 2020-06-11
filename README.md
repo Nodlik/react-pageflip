@@ -12,18 +12,19 @@ Simple React.js wrapper for StPageFlip library, for creating realistic and beaut
 * No dependencies
 
 Live Demo with source code: https://nodlik.github.io/react-pageflip/
+Docs and examples to StPageFlip: https://nodlik.github.io/StPageFlip/
 
 ### Installation
 You can install the latest version using npm:
 
 ```npm install react-pageflip```
 
-### Simple Usage
+### Basic Usage
 
 ```jsx
 import HTMLFlipBook from "react-pageflip";
 
-function MyBook(proops) {
+function MyBook(props) {
   return (
     <HTMLFlipBook width={300} height={500}>
       <div className="demoPage">Page 1</div>
@@ -49,7 +50,7 @@ const Page = React.forwardRef((props, ref) => {
   );
 });
 
-function MyBook(proops) {
+function MyBook(props) {
   return (
     <HTMLFlipBook width={300} height={500}>
       <Page number="1">Page text</Page>
@@ -134,17 +135,16 @@ this.pageFlip.getPageFlip().flipNext();
 | `turnToPage` | `pageNum: number` | `void` | Turn to the specified page number (without animation)
 | `turnToNextPage` | ` ` | `void` | Turn to the next page (without animation)
 | `turnToPrevPage` | ` ` | `void` | Turn to the previous page (without animation)
-| `flipNext` | `corner: 'top' | 'bottom'` | `void` | Turn to the next page (with animation)
-| `flipPrev` | `corner: 'top' | 'bottom'` | `void`  | Turn to the previous page (with animation)
-| `flip` | `pageNum: number, corner: 'top' | 'bottom'` | `void` | Turn to the specified page (with animation)
+| `flipNext` | `corner: 'top'` | `'bottom'` | `void` | Turn to the next page (with animation)
+| `flipPrev` | `corner: 'top'` | `'bottom'` | `void`  | Turn to the previous page (with animation)
+| `flip` | `pageNum: number, corner: 'top'` | `'bottom'` | `void` | Turn to the specified page (with animation)
 | `loadFromImages` | `images: ['path-to-image1.jpg', ...]` | `void` | Load page from images
 | `loadFromHtml` | `items: NodeListOf | HTMLElement[]` | `void` | Load page from html elements
 | `updateFromHtml` | `items: NodeListOf | HTMLElement[]` | `void` | Update page from html elements
 | `updateFromImages` | `images: ['path-to-image1.jpg', ...]` | `void` | Update page from images
-| `destroy` | ` ` | `void` | Destructor. Remove an HTML Element and all event handlers
+| `destroy` | ` ` | `void` | Destructor. Removes Parent HTML Element and all event handlers
 
 
-Docs and examples to StPageFlip: https://nodlik.github.io/StPageFlip/
 ### Contacts
 Oleg,
 
