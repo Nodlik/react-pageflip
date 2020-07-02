@@ -11,7 +11,7 @@
   },
   "homepage": "https://nodlik.github.io/react-pageflip/",
   "dependencies": {
-    "page-flip": "^0.4.0",
+    "page-flip": "latest",
     "react": "^16.13.1"
   },
   "keywords": [
