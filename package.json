@@ -1,6 +1,6 @@
 {
   "name": "react-pageflip",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "src/pageflip.js",
   "author": "oleg.litovski9@gmail.com",
   "license": "MIT",
