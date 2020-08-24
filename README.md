@@ -85,6 +85,8 @@ To set configuration use these props:
 * ```mobileScrollSupport: boolean``` - default: ```true``` disable content scrolling when touching a book on mobile devices
 * ```swipeDistance: number``` - default: ```30``` (px) minimum distance to detect swipe 
 * ```clickEventForward: boolean``` - default: ```true``` forwarding click events to the page children html elements (only for ```a``` and ```button``` tags)
+* ```useMouseEvents: boolean``` - default: ```true``` using mouse and touch events to page flipping
+
 ### Events
 You can use the following events:
 ```jsx
@@ -110,6 +112,8 @@ class DemoBook extends React.Component {
 * ```onFlip: number``` - triggered by page turning
 * ```onChangeOrientation: ("portrait", "landscape")``` - triggered when page orientation changes
 * ```onChangeState: ("user_fold", "fold_corner", "flipping", "read")``` - triggered when the state of the book changes
+* ```onInit: ({page: number, mode: 'portrait', 'landscape'})``` - triggered when the book is init and the start page is loaded. Listen (`on`) this event before using the "loadFrom..." methods
+* ```onUpdate: ({page: number, mode: 'portrait', 'landscape'})``` - triggered when the book pages are updated (using the "updateFrom..." methods)
 
 Event object has two fields: ```data: number | string``` and ```object: PageFlip```
 
@@ -139,6 +143,8 @@ this.pageFlip.getPageFlip().flipNext();
 | ----------- | ---------- | ----------- | ---------- |
 | `getPageCount` | ` ` | `number` | Get number of all pages |
 | `getCurrentPageIndex` | ` ` | `number` | Get the current page number (starts at 0) |
+| `getOrientation` | ` ` | `'portrait', 'landscape'` | Get the current orientation: portrait or landscape
+| `getBoundsRect` | ` ` | `PageRect` | Get current book sizes and position
 | `turnToPage` | `pageNum: number` | `void` | Turn to the specified page number (without animation)
 | `turnToNextPage` | ` ` | `void` | Turn to the next page (without animation)
 | `turnToPrevPage` | ` ` | `void` | Turn to the previous page (without animation)

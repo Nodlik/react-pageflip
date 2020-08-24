@@ -20,6 +20,12 @@ export default class HTMLFlipBook extends React.Component {
 
     if (this.props.onChangeState)
       this.pageFlip.on("changeState", (e) => this.props.onChangeState(e));
+
+    if (this.props.onInit)
+      this.pageFlip.on("init", (e) => this.props.onInit(e));
+
+    if (this.props.onUpdate)
+      this.pageFlip.on("update", (e) => this.props.onUpdate(e));
   }
 
   componentWillUnmount() {
@@ -32,6 +38,8 @@ export default class HTMLFlipBook extends React.Component {
       this.pageFlip.off("flip");
       this.pageFlip.off("changeOrientation");
       this.pageFlip.off("changeState");
+      this.pageFlip.off("init");
+      this.pageFlip.off("update");
 
       this.pageFlip.updateFromHtml(this.childRef);
       this.setHandlers();
