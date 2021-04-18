@@ -1,6 +1,5 @@
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
-import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 
 export default {
@@ -11,8 +10,12 @@ export default {
     },
     output: [
         {
-            // file: '../../..//index.js',
             file: 'build/index.js',
+            format: 'cjs',
+            sourcemap: true,
+        },
+        {
+            file: 'build/index.es.js',
             format: 'esm',
             sourcemap: true,
         },
@@ -23,6 +26,5 @@ export default {
             plugins: [autoprefixer()],
             minimize: true,
         }),
-        terser(),
     ],
 };

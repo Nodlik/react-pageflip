@@ -10,12 +10,15 @@
     },
     "homepage": "https://nodlik.github.io/react-pageflip/",
     "main": "build/index.js",
+    "module": "build/index.es.js",
+    "files": [
+        "build"
+    ],
     "scripts": {
         "build": "rollup -c",
         "build:dev": "rollup -c --watch",
         "eslint": "eslint . --ext .ts,.tsx"
     },
-    "type": "module",
     "devDependencies": {
         "@rollup/plugin-commonjs": "^15.1.0",
         "@rollup/plugin-node-resolve": "^9.0.0",
