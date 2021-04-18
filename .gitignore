@@ -1,8 +1,4 @@
-/node_modules
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-.vscode/*
+node_modules
 package-lock.json
+/build
+.vscode
