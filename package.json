@@ -15,6 +15,7 @@
         "build:dev": "rollup -c --watch",
         "eslint": "eslint . --ext .ts,.tsx"
     },
+    "type": "module",
     "devDependencies": {
         "@rollup/plugin-commonjs": "^15.1.0",
         "@rollup/plugin-node-resolve": "^9.0.0",
