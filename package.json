@@ -1,7 +1,6 @@
 {
     "name": "react-pageflip",
     "version": "2.0.0",
-    "main": "build/index.js",
     "author": "oleg.litovski9@gmail.com",
     "license": "MIT",
     "description": "Simple React.js wrapper for StPageFlip library, for creating realistic and beautiful page turning effect",
@@ -10,6 +9,7 @@
         "url": "https://github.com/Nodlik/react-pageflip.git"
     },
     "homepage": "https://nodlik.github.io/react-pageflip/",
+    "main": "build/index.js",
     "scripts": {
         "build": "rollup -c",
         "build:dev": "rollup -c --watch",

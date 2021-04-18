@@ -7,7 +7,7 @@ import React, {
     useState,
 } from 'react';
 
-import { PageFlip } from 'page-flip/dist/js/page-flip.module';
+import { PageFlip } from 'page-flip';
 import { IFlipSetting, IEventProps } from './settings';
 
 interface IProps extends IFlipSetting, IEventProps {
