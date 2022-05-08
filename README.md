@@ -79,33 +79,7 @@ function MyBook(props) {
 
 ### RTL
 You can make the book RTL by starting from the last page.
-
-```jsx
-import HTMLFlipBook from "react-pageflip";
-import { useRef } from "react";
-
-export default function Book(params) {
-    const book = useRef();
-
-    return (
-        <>
-            <HTMLFlipBook startPage={5} width={300} height={300} ref={book}>
-                <div>Page 1</div> {/* First page in LTR, last page in RTL */}
-                <div>Page 2</div>
-                <div>Page 3</div>
-                <div>Page 4</div>
-                <div>Page 5</div> {/* Last page in LTR, first page in RTL */}
-            </HTMLFlipBook>
-            
-             {/* Use opposite directions for page turning on custom buttons. */}
-             <button onClick={() => book.current.pageFlip().flipPrev()}> Next page </button>
-        </>
-    );
-}
-```
-If the output is not desirable, try these:
-- if the number of pages is odd, try an even number. (Example: 5 pages => `startPage={4}`).
-- disable/enable `showCover`.
+See this issue: https://github.com/Nodlik/react-pageflip/issues/22#issuecomment-1120395659
 
 ### Props
 
