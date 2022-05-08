@@ -77,12 +77,35 @@ function MyBook(props) {
 }
 ```
 
+### RTL
+You can make the book RTL by starting from the last page.
+
+```jsx
+import HTMLFlipBook from "react-pageflip";
+import { useRef } from "react";
+
+export default function Book(params) {
+    const book = useRef();
+
+    return (
+         <HTMLFlipBook startPage={5} width={300} height={300} ref={book}>
+            <div>Page 1</div> {/* First page in LTR, last page in RTL */}
+            <div>Page 2</div>
+            <div>Page 3</div>
+            <div>Page 4</div>
+            <div>Page 5</div> {/* Last page in LTR, first page in RTL */}
+        </HTMLFlipBook>
+    );
+}
+```
+
 ### Props
 
 To set configuration use these props:
 
 -   `width: number` - required
 -   `height: number` - required
+-   `startPage: number`
 -   `size: ("fixed", "stretch")` - default: `"fixed"` Whether the book will be stretched under the parent element or not
 -   `minWidth, maxWidth, minHeight, maxHeight: number` You must set threshold values ​​with size: `"stretch"`
 -   `drawShadow: bool` - default: `true` Draw shadows or not when page flipping
