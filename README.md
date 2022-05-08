@@ -77,12 +77,17 @@ function MyBook(props) {
 }
 ```
 
+### RTL
+You can make the book RTL by starting from the last page.
+See this issue: https://github.com/Nodlik/react-pageflip/issues/22#issuecomment-1120395659
+
 ### Props
 
 To set configuration use these props:
 
 -   `width: number` - required
 -   `height: number` - required
+-   `startPage: number`
 -   `size: ("fixed", "stretch")` - default: `"fixed"` Whether the book will be stretched under the parent element or not
 -   `minWidth, maxWidth, minHeight, maxHeight: number` You must set threshold values ​​with size: `"stretch"`
 -   `drawShadow: bool` - default: `true` Draw shadows or not when page flipping
