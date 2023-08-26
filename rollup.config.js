@@ -13,6 +13,7 @@ export default {
             file: 'build/index.js',
             format: 'cjs',
             sourcemap: true,
+            exports: 'auto',
         },
         {
             file: 'build/index.es.js',
